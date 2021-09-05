@@ -20,7 +20,7 @@ public class entah : MonoBehaviour
         {
             loll -= Time.deltaTime;
         }
-        if (loll <= 0)
+        if (loll <= 0 && !gameStart)
         {
             gameStart = true;
             lol.StartCardGame();

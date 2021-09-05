@@ -1,10 +1,25 @@
 fileFormatVersion: 2
-guid: 9957ccf5710cc1243be5a323776ed212
+guid: 24c4e54e33620464bad0563964d02163
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7788145733377821107
-    second: Kartu depan sementara@300x_0
+      213: -4227481963018140044
+    second: Kartu depan@300x_0
+  - first:
+      213: 8516684268169969753
+    second: Kartu depan@300x_1
+  - first:
+      213: -8086694063332774732
+    second: Kartu depan@300x_2
+  - first:
+      213: -6317266237970885054
+    second: Kartu depan@300x_3
+  - first:
+      213: -4363328952588557334
+    second: Kartu depan@300x_4
+  - first:
+      213: 7324854917800927826
+    second: Kartu depan@300x_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -126,13 +141,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kartu depan sementara@300x_0
+      name: Kartu depan@300x_0
       rect:
         serializedVersion: 2
-        x: 527
-        y: 1203
-        width: 714
-        height: 1021
+        x: 272
+        y: 2344
+        width: 594
+        height: 850
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +155,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b985f8f74d051c60800000000000000
-      internalID: 7788145733377821107
+      spriteID: 476cee38d87f455c0800000000000000
+      internalID: -4227481963018140044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartu depan@300x_1
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 2351
+        width: 594
+        height: 851
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 950cd64f737513670800000000000000
+      internalID: 8516684268169969753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartu depan@300x_2
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 2344
+        width: 594
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4bc2ac3389a46cf80800000000000000
+      internalID: -8086694063332774732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartu depan@300x_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1388
+        width: 594
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2465d2ea3df8458a0800000000000000
+      internalID: -6317266237970885054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartu depan@300x_4
+      rect:
+        serializedVersion: 2
+        x: 998
+        y: 1396
+        width: 594
+        height: 850
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae328ce7f675273c0800000000000000
+      internalID: -4363328952588557334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kartu depan@300x_5
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 1388
+        width: 594
+        height: 852
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2522cce2dbc17a560800000000000000
+      internalID: 7324854917800927826
       vertices: []
       indices: 
       edges: []
@@ -149,7 +269,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 5badd6fd53bba394eaeaeeabab86c569
     internalID: 0
     vertices: []
     indices: 

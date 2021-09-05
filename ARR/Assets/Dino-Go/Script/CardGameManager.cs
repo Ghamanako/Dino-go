@@ -7,7 +7,7 @@ public class CardGameManager : MonoBehaviour
 {
     public static CardGameManager Instance;
 
-    public static int gameSize = 2;
+    public int gameSize;
 
     // gameobject instance
     [SerializeField]
@@ -16,6 +16,8 @@ public class CardGameManager : MonoBehaviour
     // parent object of cards
     [SerializeField]
     private GameObject cardList;
+
+    private Transform cardListTransform;
 
     // sprite for card back
     [SerializeField]
@@ -32,24 +34,24 @@ public class CardGameManager : MonoBehaviour
     [SerializeField]
     private GameObject panel;
 
-    [SerializeField]
-    private GameObject info;
+    //[SerializeField]
+    //private GameObject info;
 
     // for preloading
     [SerializeField]
     private Card spritePreload;
 
-    // other UI
-    [SerializeField]
-    private Text sizeLabel;
+    //// other UI
+    //[SerializeField]
+    //private Text sizeLabel;
 
-    [SerializeField]
-    private Slider sizeSlider;
+    //[SerializeField]
+    //private Slider sizeSlider;
 
-    [SerializeField]
-    private Text timeLabel;
+    //[SerializeField]
+    //private Text timeLabel;
 
-    private float time;
+    //private float time;
 
     [SerializeField]
     private int spriteSelected;
@@ -90,7 +92,7 @@ public class CardGameManager : MonoBehaviour
         gameStart = true;
         // toggle UI
         panel.SetActive(true);
-        info.SetActive(false);
+        //info.SetActive(false);
         // set cards, size, position
         SetGamePanel();
         // renew gameplay variables
@@ -99,70 +101,73 @@ public class CardGameManager : MonoBehaviour
         // allocate sprite to card
         SpriteCardAllocation();
         StartCoroutine(HideFace());
-        time = 0;
+        //time = 0;
     }
 
     // Initialize cards, size, and position based on size of game
     private void SetGamePanel()
     {
-        // if game is odd, we should have 1 card less
+        //// if game is odd, we should have 1 card less
         int isOdd = gameSize % 2;
-        cards = new Card[gameSize * gameSize - isOdd];
-        // remove all gameobject from parent
-        foreach (Transform child in cardList.transform)
-        {
-            GameObject.Destroy(child.gameObject);
-        }
-        // calculate position between each card & start position of each card based on the Panel
-        RectTransform panelsize = panel.transform.GetComponent(typeof(RectTransform)) as RectTransform;
-        float row_size = panelsize.sizeDelta.x;
-        float col_size = panelsize.sizeDelta.y;
-        float scale = 1.0f / gameSize;
-        float xInc = row_size / gameSize;
-        float yInc = col_size / gameSize;
-        float curX = -xInc * (float)(gameSize / 2);
-        float curY = -yInc * (float)(gameSize / 2);
+        cards = new Card[gameSize - isOdd];
+        //// remove all gameobject from parent
+        //foreach (Transform child in cardList.transform)
+        //{
+        //    GameObject.Destroy(child.gameObject);
+        //}
+        //// calculate position between each card & start position of each card based on the Panel
+        //RectTransform panelsize = panel.transform.GetComponent(typeof(RectTransform)) as RectTransform;
+        //float row_size = panelsize.sizeDelta.x;
+        //float col_size = panelsize.sizeDelta.y;
+        //float scale = 1.0f / gameSize;
+        //float xInc = row_size / gameSize;
+        //float yInc = col_size / gameSize;
+        //float curX = -xInc * (float)(gameSize / 2);
+        //float curY = -yInc * (float)(gameSize / 2);
 
-        if (isOdd == 0)
+        ////if (isOdd == 0)
+        ////{
+        //curX += xInc / 2;
+        //curY += yInc / 2;
+        ////}
+        //float initialX = curX;
+        //// for each in y-axis
+        //for (int i = 0; i < gameSize; i++)
+        //{
+        //curX = initialX;
+        // for each in x-axis
+        for (int j = 0; j < gameSize; j++)
         {
-            curX += xInc / 2;
-            curY += yInc / 2;
-        }
-        float initialX = curX;
-        // for each in y-axis
-        for (int i = 0; i < gameSize; i++)
-        {
-            curX = initialX;
-            // for each in x-axis
-            for (int j = 0; j < gameSize; j++)
-            {
-                GameObject c;
-                // if is the last card and game is odd, we instead move the middle card on the panel to last spot
-                if (isOdd == 1 && i == (gameSize - 1) && j == (gameSize - 1))
-                {
-                    int index = gameSize / 2 * gameSize + gameSize / 2;
-                    Debug.Log(index);
-                    c = cards[index].gameObject;
-                }
-                else
-                {
-                    // create card prefab
-                    c = Instantiate(prefab);
-                    // assign parent
-                    c.transform.parent = cardList.transform;
+            GameObject c;
+            //// if is the last card and game is odd, we instead move the middle card on the panel to last spot
+            //if (isOdd == 1 && i == (gameSize - 1) && j == (gameSize - 1))
+            //{
+            //    int index = gameSize / 2 * gameSize + gameSize / 2;
+            //    Debug.Log(index);
+            //    c = cards[index].gameObject;
+            //}
+            //else
+            //{
+            // create card prefab
+            c = Instantiate(prefab);
+            // assign parent
+            //c.transform.parent = cardList.transform;
+            c.transform.SetParent(cardListTransform, false);
 
-                    int index = i * gameSize + j;
-                    cards[index] = c.GetComponent<Card>();
-                    cards[index].ID = index;
-                    // modify its size
-                    c.transform.localScale = new Vector3(scale, scale);
-                }
-                // assign location
-                c.transform.localPosition = new Vector3(curX, curY, 0);
-                curX += xInc;
-            }
-            curY += yInc;
+            //int index = i * gameSize + j;
+            int index = j;
+
+            cards[index] = c.GetComponent<Card>();
+            cards[index].ID = index;
+            // modify its size
+            //c.transform.localScale = new Vector3(scale, scale);
+            //}
+            // assign location
+            //c.transform.localPosition = new Vector3(curX, curY, 0);
+            //curX += xInc;
         }
+        //curY += yInc;
+        //}
     }
 
     // reset face-down rotation of all cards
@@ -304,16 +309,17 @@ public class CardGameManager : MonoBehaviour
 
     public void DisplayInfo(bool i)
     {
-        info.SetActive(i);
+        //info.SetActive(i);
     }
 
     // track elasped time
     private void Update()
     {
-        if (gameStart)
-        {
-            time += Time.deltaTime;
-            timeLabel.text = "Time: " + time + "s";
-        }
+        cardListTransform = cardList.transform;
+        //if (gameStart)
+        //{
+        //    time += Time.deltaTime;
+        //    timeLabel.text = "Time: " + time + "s";
+        //}
     }
 }
