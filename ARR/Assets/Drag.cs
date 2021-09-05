@@ -4,27 +4,53 @@ using UnityEngine;
 
 public class Drag : MonoBehaviour
 {
-    public bool isDragable = true;
-    public bool isDragged = false;
+    public GameObject detector;
+    Vector3 posisi_awal,Scale_awal;
+    bool on_pos = false;
 
-    void Update()
+
+    void Start()
     {
-     if(isDragged)
+        posisi_awal = transform.position;
+        Scale_awal = transform.localScale;
+    }
+
+    void OnMouseDrag()
+    {
+        Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z + transform.position.z);
+        Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
+        transform.position = objPosition;
+        transform.localScale = new Vector2(1.5f, 1.5f);
+       
+    }
+
+    void OnMouseUp()
+    {
+        if (on_pos)
         {
-            transform.position = (Vector3) Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            transform.position = detector.transform.position;
+            transform.localScale = new Vector2(1.5f, 1.5f);
+        }
+        else
+        {
+            transform.position = posisi_awal;
+            transform.localScale = Scale_awal;
         }
     }
 
-    private void OnMouseOver()
+    void OnTriggerStay(Collider other)
     {
-        if (isDragable && Input.GetMouseButtonDown(0))
+        if (other.gameObject == detector)
         {
-            isDragged = true;
-        }
+            on_pos = true;
+        }   
     }
 
-    private void OnMouseUp()
+    void OnTriggerExit(Collider other)
     {
-        isDragged = false;
+        if (other.gameObject == detector)
+        {
+            on_pos = false;
+        }   
     }
 }

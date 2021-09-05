@@ -474,7 +474,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1118597830
 GameObject:
@@ -613,27 +613,27 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.15
+      value: 0.28752
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.08
+      value: 0.42
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.44
+      value: -0.9623
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.0555602
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
@@ -643,17 +643,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.9984554
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -6.37
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
@@ -668,17 +668,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 820.6395
+      value: 331.50098
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 820.6395
+      value: 331.501
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 820.6395
+      value: 331.501
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 195d9a2688fea9b4abdb128c58f9c88b,
         type: 3}
@@ -861,6 +861,12 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1378819824}
   m_PrefabAsset: {fileID: 0}
+--- !u!95 &1618181015 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5866666021909216657, guid: 195d9a2688fea9b4abdb128c58f9c88b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1378819824}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1618181017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -874,10 +880,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentState: 0
-  player: 0
-  animator: {fileID: 0}
+  player: 1
+  animator: {fileID: 1618181015}
   index: 0
-  speed: 0
+  speed: 1
   source: {fileID: 0}
 --- !u!54 &1618181018
 Rigidbody:
@@ -940,7 +946,7 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: 3262a72446c77a946ae56f4a6b843f1c,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 3262a72446c77a946ae56f4a6b843f1c,
         type: 3}
@@ -976,6 +982,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Character_Rogue_FTopi
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3262a72446c77a946ae56f4a6b843f1c,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3262a72446c77a946ae56f4a6b843f1c, type: 3}
