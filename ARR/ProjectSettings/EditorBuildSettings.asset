@@ -15,6 +15,12 @@ EditorBuildSettings:
     path: Assets/Dino-Go/Scene/Matching Card Proto.unity
     guid: 62af79032d2f6604ba1290c755c8259a
   - enabled: 1
+    path: Assets/Dino-Go/Scene/PuzzleGame.unity
+    guid: ce48803ce3f832945bda1f652a4b3945
+  - enabled: 1
+    path: Assets/Dino-Go/Scene/AR.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
     path: Assets/Dino-Go/Scene/Post.unity
     guid: 7c013b797a8e8a64aa8a6811a5731ba2
   m_configObjects: {}

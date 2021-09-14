@@ -9,4 +9,9 @@ public class NextBUT : MonoBehaviour
     {
         SceneManager.LoadScene("Post");
     }
+
+    public void KeAR()
+    {
+        SceneManager.LoadScene("AR");
+    }
 }
