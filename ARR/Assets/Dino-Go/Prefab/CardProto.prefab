@@ -143,4 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6e49719d4cb2a1418b1aecc063f3b16, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteID: -1
+  id: 0
+  VFX: {fileID: 4293888993153253674, guid: 2bdfe35f537d3974e9ff7b521c1243b3, type: 3}
   img: {fileID: 455458287113569266}

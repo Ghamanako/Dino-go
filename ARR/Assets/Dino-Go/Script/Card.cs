@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class Card : MonoBehaviour
 {
-    private int spriteID;
-    private int id;
+    public int spriteID;
+    public int id;
     private bool flipped;
     private bool turning;
+    public GameObject VFX;
 
     [SerializeField]
     private Image img;
@@ -32,6 +33,7 @@ public class Card : MonoBehaviour
         if (changeSprite)
         {
             flipped = !flipped;
+
             ChangeSprite();
             StartCoroutine(Flip90(transform, time, false));
         }
@@ -60,7 +62,9 @@ public class Card : MonoBehaviour
     // call fade animation
     public void Inactive()
     {
-        StartCoroutine(Fade());
+        //StartCoroutine(Fade());
+        img.color = Color.clear;
+        Instantiate(VFX, this.transform);
     }
 
     // play fade animation by changing alpha of img's color

@@ -28,7 +28,7 @@ public class CardGameManager : MonoBehaviour
     private Sprite[] sprites;
 
     // list of card
-    private Card[] cards;
+    public Card[] cards;
 
     //we place card on this panel
     [SerializeField]
@@ -64,6 +64,8 @@ public class CardGameManager : MonoBehaviour
 
     [SerializeField]
     private bool gameStart;
+
+    public int[] selectedID;
 
     private void Awake()
     {
@@ -108,8 +110,10 @@ public class CardGameManager : MonoBehaviour
     private void SetGamePanel()
     {
         //// if game is odd, we should have 1 card less
-        int isOdd = gameSize % 2;
-        cards = new Card[gameSize - isOdd];
+        //int isOdd = gameSize % 2;
+        //cards = new Card[gameSize - isOdd];
+        cards = new Card[gameSize];
+
         //// remove all gameobject from parent
         //foreach (Transform child in cardList.transform)
         //{
@@ -191,24 +195,26 @@ public class CardGameManager : MonoBehaviour
     private void SpriteCardAllocation()
     {
         int i, j;
-        int[] selectedID = new int[cards.Length / 2];
+        //int[] selectedID = new int[cards.Length / 2];
+        selectedID = new int[cards.Length / 2];
 
         // sprite selection
         for (i = 0; i < cards.Length / 2; i++)
         {
             // get a random sprite
-            int value = Random.Range(0, sprites.Length - 1);
-            // check previous number has not been selection
-            // if the number of cards is larger than number of sprites, it will reuse some sprites
-            for (j = i; j > 0; j--)
-            {
-                if (selectedID[j - 1] == value)
-                    value = (value + 1) % sprites.Length;
-            }
-            selectedID[i] = value;
+            //int value = Random.Range(0, sprites.Length - 1);
+            //// check previous number has not been selection
+            //// if the number of cards is larger than number of sprites, it will reuse some sprites
+            //for (j = i; j > 0; j--)
+            //{
+            //    if (selectedID[j - 1] == value)
+            //        value = (value + 1) % sprites.Length;
+            //}
+            //selectedID[i] = value;
+            selectedID[i] = i;
         }
 
-        // card sprite deallocation
+        //card sprite deallocation
         for (i = 0; i < cards.Length; i++)
         {
             cards[i].Active();
@@ -217,11 +223,14 @@ public class CardGameManager : MonoBehaviour
         }
         // card sprite pairing allocation
         for (i = 0; i < cards.Length / 2; i++)
+
             for (j = 0; j < 2; j++)
             {
                 int value = Random.Range(0, cards.Length - 1);
                 while (cards[value].SpriteID != -1)
+                {
                     value = (value + 1) % cards.Length;
+                }
 
                 cards[value].SpriteID = selectedID[i];
             }
