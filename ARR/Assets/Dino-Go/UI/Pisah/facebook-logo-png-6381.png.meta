@@ -1,16 +1,7 @@
 fileFormatVersion: 2
-guid: 6a5ce7414fafa5d498c8fa207b04849b
+guid: 92afefca260761c4995956e0656b9492
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -6402875597197618431
-    second: IG
-  - first:
-      213: 2713453426801767305
-    second: Facebook
-  - first:
-      213: 899647362957989216
-    second: YT
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -49,13 +40,13 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 231}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -130,70 +121,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: IG
-      rect:
-        serializedVersion: 2
-        x: 2
-        y: 319
-        width: 217
-        height: 225
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 103d408719a6427a0800000000000000
-      internalID: -6402875597197618431
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Facebook
-      rect:
-        serializedVersion: 2
-        x: 309
-        y: 316
-        width: 222
-        height: 226
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 983f513e38f18a520800000000000000
-      internalID: 2713453426801767305
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: YT
-      rect:
-        serializedVersion: 2
-        x: 618
-        y: 340
-        width: 222
-        height: 179
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0655a3492803c7c00800000000000000
-      internalID: 899647362957989216
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
