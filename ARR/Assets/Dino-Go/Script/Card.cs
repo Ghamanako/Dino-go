@@ -65,6 +65,7 @@ public class Card : MonoBehaviour
         //StartCoroutine(Fade());
         img.color = Color.clear;
         Instantiate(VFX, this.transform);
+        //Instantiate(VFX, new Vector3(0,0,0),Quaternion.identity);
     }
 
     // play fade animation by changing alpha of img's color
