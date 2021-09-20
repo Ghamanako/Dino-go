@@ -390,6 +390,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sceneName: PuzzleGame
+  scene:
+    m_Handle: 1
 --- !u!1 &365196767
 GameObject:
   m_ObjectHideFlags: 0

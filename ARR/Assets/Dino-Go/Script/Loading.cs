@@ -6,7 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Loading : MonoBehaviour
 {
+    public float time;
     public Slider slider;
+
+    private void Start()
+    {
+        slider.value = 0;
+        slider.maxValue = time;
+    }
 
     private void Update()
     {
