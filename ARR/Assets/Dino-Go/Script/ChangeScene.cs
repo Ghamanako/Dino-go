@@ -7,9 +7,12 @@ public class ChangeScene : MonoBehaviour
 {
     public string sceneName;
 
+    public Scene scene;
+
     // Start is called before the first frame update
     private void Start()
     {
+        Debug.Log(scene.name);
     }
 
     // Update is called once per frame
