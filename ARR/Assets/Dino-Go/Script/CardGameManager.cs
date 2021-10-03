@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CardGameManager : MonoBehaviour
 {
+    public GameObject buttonHome;
     public static CardGameManager Instance;
 
     public int gameSize;
@@ -309,6 +310,7 @@ public class CardGameManager : MonoBehaviour
     {
         gameStart = false;
         panel.SetActive(false);
+        buttonHome.SetActive(true);
     }
 
     public void GiveUp()

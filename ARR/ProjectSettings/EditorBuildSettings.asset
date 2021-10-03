@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dino-Go/Scene/AR.unity
     guid: 199b1f3b1a928304582d03b5a3d260b7
+  - enabled: 1
+    path: Assets/Dino-Go/Scene/MainMenu.unity
+    guid: d87f2cc592a60b9458ff7e6e660b1999
   m_configObjects: {}
