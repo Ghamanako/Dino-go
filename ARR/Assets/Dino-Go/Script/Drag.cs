@@ -20,7 +20,7 @@ public class Drag : MonoBehaviour
         Vector3 mousePosition = new Vector3(Input.mousePosition.x, Input.mousePosition.y, -Camera.main.transform.position.z + transform.position.z);
         Vector3 objPosition = Camera.main.ScreenToWorldPoint(mousePosition);
         transform.position = objPosition;
-        transform.localScale = new Vector2(1.5f, 1.5f);
+       
        
     }
 
@@ -29,7 +29,7 @@ public class Drag : MonoBehaviour
         if (on_pos)
         {
             transform.position = detector.transform.position;
-            transform.localScale = new Vector2(1.5f, 1.5f);
+            
         }
         else
         {
