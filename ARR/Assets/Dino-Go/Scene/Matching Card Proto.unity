@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -267,7 +267,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &357609549
 RectTransform:
   m_ObjectHideFlags: 0
@@ -306,8 +306,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5236909202886329438, guid: 4ed8ebdafff62a444b4b0fc2d5c53c43,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 7ecf8bd5b8bd31749bd7fe09b71b9d17, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -391,9 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4287b6f45ff0f4ea3ee87689628f89, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: PuzzleGame
-  scene:
-    m_Handle: 1
+  sceneName: MainMenu
 --- !u!114 &357609554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1371,7 +1368,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: e7f9836e1d30bdd42b312ee4bc9b84f3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: e43e25026d38286488f232f1e6c0386d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1607,7 +1604,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
-  orthographic: 0
+  orthographic: 1
   orthographic size: 5
   m_Depth: -1
   m_CullingMask:
@@ -1670,18 +1667,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbbbdf1f4aae7354197fd2f95f9facde, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  buttonHome: {fileID: 357609548}
   gameSize: 12
   prefab: {fileID: 8512422573959163562, guid: 99d0c917cbfc7364ab3a656316b3eb2a, type: 3}
   cardList: {fileID: 1783537134}
-  cardBack: {fileID: 3296520113012632707, guid: 3ea3408b12929164aa000c575faaf3e3,
+  cardBack: {fileID: -7333850485905111108, guid: e158b362d3d4db24c9a7123037436072,
     type: 3}
   sprites:
-  - {fileID: -4227481963018140044, guid: 24c4e54e33620464bad0563964d02163, type: 3}
-  - {fileID: 8516684268169969753, guid: 24c4e54e33620464bad0563964d02163, type: 3}
-  - {fileID: -8086694063332774732, guid: 24c4e54e33620464bad0563964d02163, type: 3}
-  - {fileID: -6317266237970885054, guid: 24c4e54e33620464bad0563964d02163, type: 3}
-  - {fileID: -4363328952588557334, guid: 24c4e54e33620464bad0563964d02163, type: 3}
-  - {fileID: 7324854917800927826, guid: 24c4e54e33620464bad0563964d02163, type: 3}
+  - {fileID: 159576251612954826, guid: e158b362d3d4db24c9a7123037436072, type: 3}
+  - {fileID: -3898994347340562130, guid: e158b362d3d4db24c9a7123037436072, type: 3}
+  - {fileID: -128375322654040254, guid: e158b362d3d4db24c9a7123037436072, type: 3}
+  - {fileID: -5596709910005902546, guid: e158b362d3d4db24c9a7123037436072, type: 3}
+  - {fileID: -1847120282099691653, guid: e158b362d3d4db24c9a7123037436072, type: 3}
+  - {fileID: -1721911901770531081, guid: e158b362d3d4db24c9a7123037436072, type: 3}
   cards: []
   panel: {fileID: 207708917}
   spritePreload: {fileID: 0}

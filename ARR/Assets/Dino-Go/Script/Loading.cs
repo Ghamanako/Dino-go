@@ -23,7 +23,7 @@ public class Loading : MonoBehaviour
         }
         if (slider.value == slider.maxValue)
         {
-            SceneManager.LoadScene("Matching Card Proto");
+            SceneManager.LoadScene("MainMenu");
         }
     }
 }
