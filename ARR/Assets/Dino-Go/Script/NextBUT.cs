@@ -14,4 +14,9 @@ public class NextBUT : MonoBehaviour
     {
         SceneManager.LoadScene("AR");
     }
+
+    public void KeMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }
