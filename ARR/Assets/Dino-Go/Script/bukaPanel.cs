@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class bukaPanel : MonoBehaviour
 {
-    public GameObject panel, Next, Back;
+    public GameObject panel, Next, Back, puzzle, tutor;
    
     
     public void BukaPanel()
@@ -33,4 +33,25 @@ public class bukaPanel : MonoBehaviour
         Back.SetActive(true);
     }
 
+    public void BukaTutor()
+    {
+        puzzle.SetActive(false);
+        tutor.SetActive(true);
+    }
+
+    public void TutupTutor()
+    {
+        tutor.SetActive(false);
+        puzzle.SetActive(true);
+    }
+
+    public void TUtorAr()
+    {
+        tutor.SetActive(true);
+    }
+
+    public void CloseAr()
+    {
+        tutor.SetActive(false);
+    }
 }
