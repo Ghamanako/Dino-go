@@ -5,15 +5,24 @@ using UnityEngine;
 public class bukaPanel : MonoBehaviour
 {
     public GameObject panel, Next, Back, puzzle, tutor;
-   
-    
+
+    public Animator animator;
+
+
+    void Start()
+    {
+        animator = panel.GetComponent<Animator>();   
+    }
+
     public void BukaPanel()
     {
         panel.gameObject.SetActive(true);
+        animator.SetTrigger("open");
     }
 
     public void TutupPanel()
     {
+        animator.SetTrigger("close");
         panel.gameObject.SetActive(false);
     }
 

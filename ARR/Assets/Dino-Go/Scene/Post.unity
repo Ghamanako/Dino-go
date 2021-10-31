@@ -217,6 +217,7 @@ GameObject:
   - component: {fileID: 418573130}
   - component: {fileID: 418573129}
   - component: {fileID: 418573132}
+  - component: {fileID: 418573133}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -297,6 +298,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 418573133}
+        m_MethodName: ClickSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &418573130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,6 +358,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9c9cf530cb66c0848b99bb6c65ad2b32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &418573133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 418573127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4079343c7849b7243992e6f476b85e9b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 1757374108}
+  clickSFX: {fileID: 8300000, guid: b6c52f883dde7d1498f08521c92b411f, type: 3}
 --- !u!1 &499432233
 GameObject:
   m_ObjectHideFlags: 0
@@ -1479,7 +1505,8 @@ AudioSource:
   m_GameObject: {fileID: 1757374107}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 96701c405a62b0a489a471c3471a3def,
+    type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
