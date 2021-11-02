@@ -7,7 +7,8 @@ public class Drag : MonoBehaviour
     public GameObject detector;
     Vector3 posisi_awal,Scale_awal;
     bool on_pos = false;
-
+    public AudioSource audioSource;
+    public AudioClip benar, salah;
 
     void Start()
     {
@@ -29,12 +30,13 @@ public class Drag : MonoBehaviour
         if (on_pos)
         {
             transform.position = detector.transform.position;
-            
+            audioSource.PlayOneShot(benar);
         }
         else
         {
             transform.position = posisi_awal;
             transform.localScale = Scale_awal;
+            audioSource.PlayOneShot(salah);
         }
     }
 

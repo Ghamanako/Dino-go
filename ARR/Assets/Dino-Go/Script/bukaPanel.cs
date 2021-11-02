@@ -5,7 +5,7 @@ using UnityEngine;
 public class bukaPanel : MonoBehaviour
 {
     public GameObject panel, Next, Back, puzzle, tutor;
-
+    public GameObject awal;
     public Animator animator;
 
 
@@ -62,5 +62,11 @@ public class bukaPanel : MonoBehaviour
     public void CloseAr()
     {
         tutor.SetActive(false);
+    }
+
+    public void Puzzle2Mulai()
+    {
+        awal.SetActive(false);
+        puzzle.SetActive(true);
     }
 }
