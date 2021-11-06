@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fighterStates: 0
-  SoundFX: {fileID: 0}
+  SoundFX: {fileID: 8300000, guid: d7d2722f1468fec46bde85719f6b5672, type: 3}
   HorizontalForce: 0
   verticalForce: 0
 --- !u!1101 &-2929723152481886170
@@ -84,7 +84,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fighterStates: 3
-  SoundFX: {fileID: 0}
+  SoundFX: {fileID: 8300000, guid: 896615d4348ef9f469727f454aa60032, type: 3}
   HorizontalForce: 0
   verticalForce: 0
 --- !u!1102 &-1752075389251538367

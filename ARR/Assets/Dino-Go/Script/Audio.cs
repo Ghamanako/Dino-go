@@ -5,7 +5,6 @@ Copyright (c) 2010-2014 Qualcomm Connected Experiences, Inc.
 All Rights Reserved.
 Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
-
 using UnityEngine;
 using Vuforia;
 using UnityEngine.Events;
@@ -62,6 +61,7 @@ public class Audio : MonoBehaviour, ITrackableEventHandler
             newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " found");
+           
             OnTrack.Invoke();
             OnTrackingFound();
         }
@@ -69,6 +69,7 @@ public class Audio : MonoBehaviour, ITrackableEventHandler
                  newStatus == TrackableBehaviour.Status.NO_POSE)
         {
             Debug.Log("Trackable " + mTrackableBehaviour.TrackableName + " lost");
+           
             OnLost.Invoke();
             OnTrackingLost();
         }

@@ -18,8 +18,12 @@ public class AiStateBehaviours : StateMachineBehaviour
             fighter = animator.gameObject.GetComponent<AII>();
           
         }
-       
-       
+
+        if (SoundFX != null)
+        {
+            fighter.PlaySound(SoundFX);
+        }
+
         fighter.currentState = fighterStates;
         fighter.Body.AddRelativeForce(new Vector3(0, verticalForce, 0));
 

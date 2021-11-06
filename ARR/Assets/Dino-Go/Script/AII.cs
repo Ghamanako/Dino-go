@@ -22,10 +22,12 @@ public class AII : MonoBehaviour
     private float random;
     private float randomSetTime;
     public AudioSource source;
+
+    private Audio audio;
     // Start is called before the first frame update
     void Start()
     {
-
+        Time.timeScale = 0;
         rigidbody = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
      
@@ -83,8 +85,8 @@ public class AII : MonoBehaviour
 
     public void UpdateAI()
     {
-        
-      
+
+       
 
         if (Time.time - randomSetTime > 1)
         {
@@ -141,7 +143,20 @@ public class AII : MonoBehaviour
         }
     }
 
-  
+    public void PlaySound(AudioClip sound)
+    {
+        SfxDinosaurus.PlaySound(sound, source);
+    }
+    
+    public void resumeanimation()
+    {
+        Time.timeScale = 1;
+    }
+
+   public void pauseAnimation()
+    {
+        Time.timeScale = 0;
+    }
 
     public void pain()
     {
