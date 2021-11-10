@@ -746,16 +746,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 839159144}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45686173b62ddbc43afdb7975a383c55, type: 3}
+  m_Script: {fileID: 11500000, guid: 4079343c7849b7243992e6f476b85e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  Next: {fileID: 0}
-  Back: {fileID: 0}
-  puzzle: {fileID: 0}
-  tutor: {fileID: 1322471006}
-  awal: {fileID: 0}
-  animator: {fileID: 0}
+  audioSource: {fileID: 1062711677}
+  clickSFX: {fileID: 8300000, guid: b6c52f883dde7d1498f08521c92b411f, type: 3}
 --- !u!114 &839159147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,8 +794,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 1322471010}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: close
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 839159146}
-        m_MethodName: CloseAr
+        m_MethodName: ClickSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1165,7 +1171,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 5a3975cd284f5db44815aaf228bdf446,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: b7ee77dd7a6b6664aa80fe3cc2eb23ed, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1279,11 +1285,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: 96701c405a62b0a489a471c3471a3def,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c503a50e8abc3ef45bd4e5b3fa0ec2c7, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -1710,13 +1716,14 @@ GameObject:
   - component: {fileID: 1322471007}
   - component: {fileID: 1322471009}
   - component: {fileID: 1322471008}
+  - component: {fileID: 1322471010}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1322471007
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1726,7 +1733,7 @@ RectTransform:
   m_GameObject: {fileID: 1322471006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 75207225}
   - {fileID: 839159145}
@@ -1775,6 +1782,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1322471006}
   m_CullTransparentMesh: 0
+--- !u!95 &1322471010
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1322471006}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a11822ba34d36734aaf4b93493946813, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1367766032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1787,7 +1813,6 @@ GameObject:
   - component: {fileID: 1367766037}
   - component: {fileID: 1367766036}
   - component: {fileID: 1367766035}
-  - component: {fileID: 1367766034}
   - component: {fileID: 1367766038}
   m_Layer: 5
   m_Name: Button
@@ -1815,25 +1840,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 422}
   m_SizeDelta: {x: 151.24066, y: 151.24066}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1367766034
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1367766032}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45686173b62ddbc43afdb7975a383c55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panel: {fileID: 0}
-  Next: {fileID: 0}
-  Back: {fileID: 0}
-  puzzle: {fileID: 0}
-  tutor: {fileID: 1322471006}
-  awal: {fileID: 0}
-  animator: {fileID: 0}
 --- !u!114 &1367766035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1877,15 +1883,15 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1367766034}
-        m_MethodName: TUtorAr
-        m_Mode: 1
+      - m_Target: {fileID: 1322471010}
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
+          m_StringArgument: open
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1367766038}

@@ -4,26 +4,26 @@ using UnityEngine;
 
 public class bukaPanel : MonoBehaviour
 {
-    public GameObject panel, Next, Back, puzzle, tutor;
+    public GameObject panel,puzzle, tutor;
     public GameObject awal;
-    public Animator animator;
+   
 
 
     void Start()
     {
-        animator = panel.GetComponent<Animator>();   
+         
     }
 
     public void BukaPanel()
     {
         panel.gameObject.SetActive(true);
-        animator.SetTrigger("open");
+       
     }
 
     public void TutupPanel()
     {
-        animator.SetTrigger("close");
-        panel.gameObject.SetActive(false);
+       
+        
     }
 
     public void TutorialPanel()
@@ -31,26 +31,17 @@ public class bukaPanel : MonoBehaviour
         panel.SetActive(true);
     }
 
-    public void nextPanel()
-    {
-        Next.SetActive(true);
-        Back.SetActive(false);
-    }
-    public void BAckPanel()
-    {
-        Next.SetActive(false);
-        Back.SetActive(true);
-    }
+  
 
     public void BukaTutor()
     {
         puzzle.SetActive(false);
-        tutor.SetActive(true);
+      
     }
 
     public void TutupTutor()
     {
-        tutor.SetActive(false);
+       
         puzzle.SetActive(true);
     }
 
