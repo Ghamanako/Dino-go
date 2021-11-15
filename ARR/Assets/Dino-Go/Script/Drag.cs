@@ -41,12 +41,18 @@ public class Drag : MonoBehaviour
     {
         if (on_pos)
         {
-            transform.position = detector.transform.position;
-            audioSource.PlayOneShot(benar);
-            posisi = "locked";
-            Instantiate(effect, gameObject.transform.position, effect.rotation);
-           
+            if (posisi != "locked")
+            {
+                transform.position = detector.transform.position;
+                audioSource.PlayOneShot(benar);
+                Instantiate(effect, gameObject.transform.position, effect.rotation);
+                posisi = "locked";
+            }
+          
+
+
         }
+        
         else
         {
             transform.position = posisi_awal;
@@ -61,7 +67,7 @@ public class Drag : MonoBehaviour
         {
             
             on_pos = true;
-           
+          
            
         }   
     }

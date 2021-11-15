@@ -2,28 +2,28 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class bukaPanel : MonoBehaviour
+public class BukaPanel : MonoBehaviour
 {
-    public GameObject panel,puzzle, tutor;
-    public GameObject awal;
-   
+    public GameObject panel, puzzle, PuzzleEZ, PuzzleHard, tutor,difficult;
+    public GameObject awal, awal2;
+
 
 
     void Start()
     {
-         
+
     }
 
-    public void BukaPanel()
+    public void Bukapanelll()
     {
         panel.gameObject.SetActive(true);
-       
+
     }
 
     public void TutupPanel()
     {
-       
-        
+
+
     }
 
     public void TutorialPanel()
@@ -31,17 +31,17 @@ public class bukaPanel : MonoBehaviour
         panel.SetActive(true);
     }
 
-  
+
 
     public void BukaTutor()
     {
         puzzle.SetActive(false);
-      
+
     }
 
     public void TutupTutor()
     {
-       
+
         puzzle.SetActive(true);
     }
 
@@ -55,9 +55,31 @@ public class bukaPanel : MonoBehaviour
         tutor.SetActive(false);
     }
 
-    public void Puzzle2Mulai()
+    public void PuzzleMulaiEz()
     {
         awal.SetActive(false);
         puzzle.SetActive(true);
+        PuzzleEZ.SetActive(true);
+        PuzzleHard.SetActive(false);
+    }
+
+    public void PuzzleMulaiHard()
+    {
+        awal2.SetActive(false);
+        puzzle.SetActive(true);
+        PuzzleEZ.SetActive(false);
+        PuzzleHard.SetActive(true);
+    }
+
+    public void Easy()
+    {
+        awal.SetActive(true);
+        difficult.SetActive(false);
+    }
+
+    public void Hard()
+    {
+        difficult.SetActive(false);
+        awal2.SetActive(true);
     }
 }

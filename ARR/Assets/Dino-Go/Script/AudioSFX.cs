@@ -12,4 +12,12 @@ public class AudioSFX : MonoBehaviour
     {
         audioSource.PlayOneShot(clickSFX);
     }
+
+    public void ExitGame()
+    {
+        if (Input.backButtonLeavesApp)
+        {
+            Application.Quit();
+        }
+    }
 }
