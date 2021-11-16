@@ -88,15 +88,15 @@ public class AII : MonoBehaviour
     public void UpdateAI()
     {
 
-        if (Time.timeScale == 1)
-        {
+       
+      
             if (Time.time - randomSetTime > 1)
             {
                 random = Random.value;
                 randomSetTime = Time.time;
             }
             animator.SetFloat("random", random);
-        }
+    
            
         
 
