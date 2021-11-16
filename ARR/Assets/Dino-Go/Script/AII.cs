@@ -9,6 +9,8 @@ public class AII : MonoBehaviour
         HUMAN, AI
     };
 
+    
+
     public AIStates currentState = AIStates.Idle;
     public PlayerType player;
   
@@ -86,14 +88,19 @@ public class AII : MonoBehaviour
     public void UpdateAI()
     {
 
-       
-
-        if (Time.time - randomSetTime > 1)
+        if (Time.timeScale == 1)
         {
-            random = Random.value;
-            randomSetTime = Time.time;
+            if (Time.time - randomSetTime > 1)
+            {
+                random = Random.value;
+                randomSetTime = Time.time;
+            }
+            animator.SetFloat("random", random);
         }
-        animator.SetFloat("random", random);
+           
+        
+
+      
     }
 
 

@@ -11,7 +11,7 @@ public class BukaPanel : MonoBehaviour
 
     void Start()
     {
-
+        Time.timeScale = 1;
     }
 
     public void Bukapanelll()

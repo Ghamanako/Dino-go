@@ -45,6 +45,8 @@ public class Audio : MonoBehaviour, ITrackableEventHandler
 
     #region PUBLIC_METHODS
 
+   
+
     /// <summary>
     ///     Implementation of the ITrackableEventHandler function called when the
     ///     tracking state changes.
