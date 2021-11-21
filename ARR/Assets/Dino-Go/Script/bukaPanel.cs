@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BukaPanel : MonoBehaviour
+public class bukaPanel : MonoBehaviour
 {
     public GameObject panel, puzzle, PuzzleEZ, PuzzleHard, tutor,difficult;
     public GameObject awal, awal2;
