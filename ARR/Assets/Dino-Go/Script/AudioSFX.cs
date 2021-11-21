@@ -10,7 +10,10 @@ public class AudioSFX : MonoBehaviour
 
     public void ClickSound()
     {
-        audioSource.PlayOneShot(clickSFX);
+        if (audioSource != null)
+        {
+            audioSource.PlayOneShot(clickSFX);
+        }
     }
 
     public void ExitGame()
