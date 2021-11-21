@@ -6,9 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Dino-Go/Scene/Splash Screen.unity
-    guid: faa16b447fe8d6249b0da9f51eee7754
-  - enabled: 1
     path: Assets/Dino-Go/Scene/Loading.unity
     guid: 1ee40289b2de3784194225276260062f
   - enabled: 1
@@ -29,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dino-Go/Scene/MainMenu.unity
     guid: d87f2cc592a60b9458ff7e6e660b1999
+  - enabled: 1
+    path: Assets/Dino-Go/Scene/Splash Screen.unity
+    guid: faa16b447fe8d6249b0da9f51eee7754
   m_configObjects: {}
