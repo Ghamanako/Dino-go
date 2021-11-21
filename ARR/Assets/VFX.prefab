@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3560513416517869218}
   - component: {fileID: 954718577360327328}
   - component: {fileID: 1906161164689423576}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: VFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
