@@ -29,4 +29,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Dino-Go/Scene/Splash Screen.unity
     guid: faa16b447fe8d6249b0da9f51eee7754
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 24567427c4936794083cd9c1b5febbfb,
+      type: 2}

@@ -16,50 +16,25 @@ MonoBehaviour:
     vuforiaLicenseKey: AeejpTj/////AAABmTE3s9xWnUz3lPRgIhC0rWIloX0LQFh792gc9pNuJa62Qa9ZGnXKpN7v8x4+qldkYxZdg1CQcYj3iLSUwcXFfN3Tw1/pMbCQcykJhWRhhOr+rcjQiGiHlzZc5jNxg034fEtxQOTjY4RiG7fmQig81yHr7fqWXWGMWMnJsBoORshBKqccDAmX4gLRk90XehwMm9AbYgRYWNjtyTdO1kRS4BsbAqCa857GNfRzCIdlQwYJl/p31BuaTp+AFuIAYxQhPyeIKCExqQDsAZVCQJXEnzz6gH3rp2yAeaHyhfoKiabhbGEvKVVlDlxZzk1YZHQwtTUq5EAqU+E76SH/nMsUPJmHg4f565ip4GgYh0VzIJpg
     ufoLicenseKey: QWRwcjA2bi8vLy8vQUFBQUtGVk14WGhyQ1VHNXUvTkpPaWVGZy9zOUw4b2luMmtrWVlHNjVCdU5UL0kyOWFON3pzYTlWMFF6akFoNERLSElROUF4Q2s2NjlvZEFDNnFsbXBsdCtDUHVKenZ3QWNzUWdVNTFDWDUyT2k2Q1RmaTJ4cjdNNzdPallTTzV4dFROeFhMSkdpZTUzZ3FaM3J1Q05XMWUvdlVvMVhEOUo5bXR1SUw3WExObHVjV08wMmNCK0dKZWdjeElhYzRNa2szV2hhdzlsbGtSVkUzcHlXK0Y3OEczRUVRZlNyd0NWTTB5bTZjZEU2ZHdrUm52QjR3aHNhRldlV0NEUWhpU1RJU0JqSllmcEZ1dlRVbDJ2MjRuN3Ruc3NEZDVXamlmS093SFlPd2E5YXFHb2U3RkJxdTg4ZTErcFdFeXdtcFkzRjBIV1VUVkloVUxXS3JvV0JHMVdBbktFTEJXQVR3aFF5RlRUVDQ0Qmc2MHMvSmU=
     delayedInitialization: 0
-    cameraDeviceModeSetting: -3
+    cameraDeviceModeSetting: -2
     maxSimultaneousImageTargets: 1
     maxSimultaneousObjectTargets: 1
     useDelayedLoadingObjectTargets: 0
-    version: 8.1.12
+    modelTargetRecoWhileExtendedTracked: 1
+    version: 8.5.9
     eulaAcceptedVersions: '{"Values":["8.1","8.5"]}'
-  digitalEyewear:
-    cameraOffset: 0.06
-    distortionRenderingLayer: 31
-    eyewearType: 0
-    stereoFramework: 0
-    seeThroughConfiguration: 0
-    viewerName: Generic Cardboard
-    viewerManufacturer: Vuforia
-    useCustomViewer: 0
-    customViewer:
-      Version: 0
-      Name: 
-      Manufacturer: 
-      ButtonType: 0
-      ScreenToLensDistance: 0
-      InterLensDistance: 0
-      TrayAlignment: 0
-      LensCenterToTrayDistance: 0
-      DistortionCoefficients: {x: 0, y: 0}
-      FieldOfView: {x: 0, y: 0, z: 0, w: 0}
-      ContainsMagnet: 0
   database:
     disableModelExtraction: 0
   videoBackground:
-    clippingMode: 0
     numDivisions: 2
     videoBackgroundShader: {fileID: 4800000, guid: f40623b353e2f1943b1b3ba42975db7a,
       type: 3}
-    matteShader: {fileID: 4800000, guid: 66d0d78a3000021448b598bb54a3bfdf, type: 3}
     videoBackgroundEnabled: 1
   deviceTracker:
     autoInitTracker: 0
     autoStartTracker: 0
-    trackingMode: 1
-    posePrediction: 0
-    modelCorrectionMode: 0
-    modelTransformEnabled: 0
-    modelTransform: {x: 0, y: 0.1, z: -0.1}
+    arcoreRequirement: 1
+    autoImportArcore: 1
   smartTerrain:
     autoInitTracker: 0
     autoStartTracker: 0
